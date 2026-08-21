@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Loopnod</title>
+<style>
+:root {
+  --ink: #1b1b1f;
+  --muted: #5b5b66;
+  --accent: #6E56CF;
+  --accent2: #FF8F6B;
+  --line: #e6e5ea;
+  --bg: #ffffff;
+  --panel: #ECE9F7;
+  --shadow-dark: rgba(160,155,190,0.55);
+  --shadow-light: rgba(255,255,255,0.9);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+.topbar {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.logo-mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-outer {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-inner {
+  width: 31px; height: 31px; border-radius: 9px;
+  background: var(--panel);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-word { font-weight: 800; font-size: 16px; letter-spacing: 0.2px; color: var(--ink); }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.topbar nav a:hover { color: var(--accent); }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 24px 0;
+}
+.hero .kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: linear-gradient(135deg, rgba(110,86,207,0.12), rgba(255,143,107,0.12));
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.hero h1 { font-size: 30px; margin: 14px 0 6px; }
+.hero .sub { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+h2 { font-size: 20px; margin-top: 2.4em; border-top: 1px solid var(--line); padding-top: 0.9em; }
+h3 { font-size: 16.5px; margin-top: 1.8em; color: #2b2b33; }
+p, li { font-size: 15.5px; color: #2b2b33; }
+strong { color: var(--ink); }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #faf9fc; }
+code { background: #f4f3f7; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5em 0; }
+em { color: #46464f; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 18px 0;
+  background: #fcfbfe;
+}
+.card h3 { margin-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 20px; }
+.pill {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+  background: rgba(110,86,207,0.09); border-radius: 999px; padding: 5px 12px;
+}
+.toc { border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 24px 0 8px; background: #fcfbfe; }
+.toc p { margin: 4px 0; font-size: 14px; }
+.toc a { text-decoration: none; }
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+footer .foot-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer .foot-links a { color: var(--muted); text-decoration: none; font-size: 12.5px; }
+footer .foot-links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="logo-mark" href="terms-of-service.html">
+    <div class="logo-outer">
+    <div class="logo-inner">
+      <svg width="26" height="13" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="infGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6E56CF"/>
+            <stop offset="1" stop-color="#FF8F6B"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 5 C7 5 2 11 2 15 C2 19 7 25 15 25 C22 25 25 19 30 15 C35 11 38 5 45 5 C53 5 58 11 58 15 C58 19 53 25 45 25 C38 25 35 19 30 15 C25 11 22 5 15 5 Z"
+          stroke="url(#infGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <span class="logo-word">Loopnod</span>
+  </a>
+  <nav>
+    <a href="terms-of-service.html" class="">Terms of Service</a>
+    <a href="privacy-policy.html" class="active">Privacy Policy</a>
+    <a href="community-standards.html" class="">Community Standards</a>
+    <a href="cookie-policy.html" class="">Cookie Policy</a>
+    <a href="advertising-policy.html" class="">Advertising Policy</a>
+    <a href="help-center.html" class="">Help Center</a>
+  </nav>
+</div>
+<div class="hero">
+  <span class="kicker">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="sub">How we collect, use, and protect your information.</p>
+</div>
+<main>
+<p><strong>Effective Date:</strong> August 21, 2026 · <strong>Version:</strong> 2026-08-21</p>
+<p>This Privacy Policy explains how Francis&M_Tech ("<strong>Loopnod</strong>,"
+"<strong>we</strong>," "<strong>us</strong>") collects, uses, discloses, and protects information
+in connection with the Loopnod app and related services (the
+"<strong>Service</strong>"). It's incorporated by reference into our <a href="./terms-of-service.html">Terms of Service</a>.</p>
+<h2>1. Information We Collect</h2>
+<h3>1.1 Information you provide directly</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Where in the app</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account information</td>
+<td>Username, display name, email or phone number, password (stored hashed, never in plain text), country, self-reported age at signup</td>
+<td>Sign-up flow</td>
+</tr>
+<tr>
+<td>Profile information</td>
+<td>Bio, avatar photo</td>
+<td>Edit Profile</td>
+</tr>
+<tr>
+<td>Content you create</td>
+<td>Loops (photos, video, text, polls), Notes (comments), Status posts, uploaded music tracks</td>
+<td>Throughout the app</td>
+</tr>
+<tr>
+<td>Direct messages</td>
+<td>Text, voice notes, shared audio clips — <strong>see Section 1.3</strong></td>
+<td>Chat</td>
+</tr>
+<tr>
+<td>Group information</td>
+<td>Group name, membership list, each member's role (admin/member), and Group messages — <strong>the message content is end-to-end encrypted the same way direct messages are; the membership and role information is not — see Section 1.3</strong></td>
+<td>Groups</td>
+</tr>
+<tr>
+<td>Legal acceptance record</td>
+<td>Timestamp and version of the Terms/Privacy Policy you accepted at signup</td>
+<td>Sign-up flow</td>
+</tr>
+</tbody>
+</table>
+<h3>1.2 Information collected automatically</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device &amp; technical information</td>
+<td>Device type, operating system, app version, IP address (processed transiently by our infrastructure providers for routing/security)</td>
+</tr>
+<tr>
+<td>Usage information</td>
+<td>Features you use, screens you view, actions like likes/follows/echoes, approximate timestamps of activity</td>
+</tr>
+<tr>
+<td>Message metadata</td>
+<td>For direct messages and Group messages: who you're messaging or which Group, when, and for voice notes/audio clips, approximate file size and duration — <strong>not the content itself</strong>, see Section 1.3</td>
+</tr>
+</tbody>
+</table>
+<p>We do not use third-party advertising trackers or sell advertising, so
+we do not collect data for ad-targeting purposes. See our
+<a href="./advertising-policy.html">Advertising Policy</a> for more.</p>
+<h3>1.3 Direct message and Group message privacy</h3>
+<p><strong>What we cannot see:</strong> The <em>content</em> of your direct messages and
+Group messages — text, voice note audio, and shared audio clip audio —
+is protected by end-to-end encryption before it ever leaves your
+device. Our servers store and relay only encrypted ciphertext. We do
+not have the cryptographic keys needed to decrypt it, and as a matter
+of engineering design, not just policy, we cannot read your message
+content — including in response to our own curiosity, an internal
+request, or most legal process. This is true for Group messages exactly
+as it is for direct messages.</p>
+<p><strong>What we can see:</strong> Message and Group <em>metadata</em> is not encrypted and
+is visible to us as the operator of the Service: which accounts are in
+a conversation, which Groups exist and who's in them with what role,
+when messages were sent, and — for voice notes and shared audio clips —
+the approximate size and duration of the file (not its content). We
+also process your public identity keys (used to set up encrypted
+sessions) and, transiently, encrypted file blobs in cloud storage,
+access to which is restricted to conversation or Group participants.</p>
+<p><strong>Anyone in a Group can read what's sent to it, for as long as they're
+a member.</strong> Encryption protects Group content from us and from
+outsiders — it does not, and cannot, protect you from another member of
+a Group you joined or were added to. See our <a href="./terms-of-service.html#groups">Terms of Service</a>
+for how adding someone to a Group works, and your options if you're
+added somewhere you don't want to be.</p>
+<p><strong>By default, there is no message backup or account recovery for
+encrypted content</strong>, for either direct messages or Group messages. The
+private keys that decrypt your messages live only on your device(s),
+and we do not build any server-side mechanism to back them up, escrow
+them, or recover them, because doing so would create a place a
+compromise or legal order could expose content we otherwise cannot
+see.</p>
+<p><strong>Chat backups.</strong> You can optionally turn on chat backup
+(Settings → Chats → Chat backup). When you do, your backup is saved to
+your own Google Drive — storage tied to your Google account, not to
+Loopnod — and we do not receive, store, or keep any copy of it on our
+side. If you choose an <strong>end-to-end encrypted backup</strong>, it's
+protected by a password or key that only you create and hold; we never
+receive, see, log, or store it, and we have no way to recover your
+backup if you lose it — including if you ask us to. A <strong>standard
+backup</strong> is protected using your account sign-in instead, so
+there's no separate password to lose, but it also means anyone able to
+access your account can access that backup. You can turn chat backup
+off or delete a backup at any time, from the app or directly in your
+Google Drive; because we never held a copy, there's nothing on our end
+left to delete.</p>
+<p><strong>Linking a device.</strong> Adding a device (Settings → Linked
+Devices) can now bring over your past conversation history from one of
+your other active devices, in addition to future messages — this
+happens directly between your own devices and stays end-to-end
+encrypted the whole way; we relay ciphertext we cannot read, the same
+as any other message. If you sign out, uninstall the app, or lose every
+device your keys were on — with no other linked device to sync from and
+no chat backup turned on — the messages that were only there are gone,
+including to us.</p>
+<h3>1.4 Information from other users</h3>
+<p>If another user has your contact information and connects it with our
+Service, or if another user messages you, mentions you, or adds you to
+a Group, we may receive limited information about you from them.</p>
+<h2>2. How We Use Information</h2>
+<p>We use the information described above to:</p>
+<ul>
+<li>create and maintain your account, and authenticate you;</li>
+<li>operate the Service's core features (posting, messaging, Groups,
+  following, etc.);</li>
+<li>route and deliver end-to-end encrypted messages, without being able
+  to read their content;</li>
+<li>detect, investigate, and prevent fraud, abuse, and violations of our
+  Terms of Service and Community Standards;</li>
+<li>respond to your support requests;</li>
+<li>send you service-related communications (security alerts,
+  verification codes) and, where you've opted in, product updates;</li>
+<li>comply with legal obligations, including responding to valid legal
+  process and CSAM reporting obligations;</li>
+<li>improve and develop the Service, including through aggregated or
+  de-identified analysis of usage patterns.</li>
+</ul>
+<p>We do not use the content of your direct or Group messages for any
+purpose, including the ones above, because we are not able to — see
+Section 1.3.</p>
+<h2>3. Legal Bases for Processing (EU/UK/EEA Users)</h2>
+<p>If you're located in the EU, UK, or EEA, we process your personal data
+under the following legal bases:</p>
+<ul>
+<li><strong>Performance of a contract</strong> — to provide the Service you've signed
+  up for (account operation, posting, messaging).</li>
+<li><strong>Legitimate interests</strong> — to keep the Service secure, prevent abuse,
+  and improve our features, balanced against your rights and interests.</li>
+<li><strong>Legal obligation</strong> — to comply with applicable law, including CSAM
+  reporting obligations.</li>
+<li><strong>Consent</strong> — for optional communications like marketing emails,
+  which you can withdraw at any time.</li>
+</ul>
+<h2>4. How We Share Information</h2>
+<p>We do not sell your personal information. We share information only in
+the following circumstances:</p>
+<ul>
+<li><strong>Service providers</strong> who help us operate the Service under
+  contractual confidentiality and data-protection obligations,
+  currently including Supabase (backend/database), push notification
+  providers, and infrastructure/CDN providers as the Service evolves;</li>
+<li><strong>Legal process</strong> — where required to comply with a valid subpoena,
+  warrant, court order, or other legal obligation, to the extent our
+  end-to-end encryption architecture technically allows us to comply;</li>
+<li><strong>Safety and enforcement</strong> — with law enforcement where necessary to
+  investigate fraud, abuse, or violations of our Terms, including
+  mandatory CSAM reporting to NCMEC;</li>
+<li><strong>Business transfers</strong> — in connection with a merger, acquisition, or
+  sale of assets, subject to this Policy continuing to apply to your
+  information;</li>
+<li><strong>With your consent</strong> — for any other purpose we've separately
+  disclosed and you've agreed to.</li>
+</ul>
+<h2>5. Data Retention</h2>
+<p>We retain your information for as long as your account is active, and
+for a reasonable period afterward to comply with legal obligations,
+resolve disputes, and enforce our agreements. When you delete a piece
+of content or your account, we remove it from active systems and
+complete removal from our own internal system backups and caches
+within a reasonable period, except where retention is legally required
+(for example, records related to a CSAM report). Message metadata is
+retained separately from message content, consistent with Section 1.3.</p>
+<p><strong>Chat backups you turn on are different.</strong> These live in
+your own Google Drive, not in any backup or cache of ours, so this
+Section doesn't apply to them — we have nothing to retain or delete on
+our side in the first place. Managing and deleting them is entirely in
+your hands: from the app (Settings → Chats → Chat backup) or directly
+in your Google Drive. For an end-to-end encrypted backup specifically,
+we also never hold the password or key protecting it, so we cannot
+open, restore, or recover one on your behalf under any circumstance,
+including a legal request — see Section 1.3.</p>
+<h2>6. Your Rights and Choices</h2>
+<h3>6.1 Access and correction</h3>
+<p>You can view and update most of your information directly in the app
+(Edit Profile, Settings). You can delete individual pieces of content
+at any time, and delete your account entirely from Settings → Delete
+Account.</p>
+<h3>6.2 Notification preferences</h3>
+<p>You can manage push notification and marketing email preferences in
+in-app Settings and via the unsubscribe link in marketing emails.</p>
+<h3>6.3 EU/UK/EEA rights</h3>
+<p>If you're in the EU, UK, or EEA, you additionally have the right to:
+request a copy of your personal data (data portability); object to
+processing based on legitimate interests; restrict processing in
+certain circumstances; and lodge a complaint with your local data
+protection supervisory authority. To exercise these rights, contact us
+at loopnod.support@gmail.com.</p>
+<h3>6.4 California rights (CCPA/CPRA)</h3>
+<p>If you're a California resident, you have the right to: know what
+personal information we collect, use, and disclose; request deletion
+of your personal information; correct inaccurate personal information;
+and opt out of the "sale" or "sharing" of personal information — we do
+not sell or share your personal information as defined by the
+CCPA/CPRA. We do not discriminate against you for exercising any of
+these rights. To exercise them, contact us at loopnod.support@gmail.com.</p>
+<h3>6.5 Other U.S. state privacy laws</h3>
+<p>If you're a resident of another state with a comprehensive privacy
+law, you may have similar rights to those described in Section 6.4,
+which we honor consistent with the applicable law of your state of
+residence.</p>
+<h2>7. Children's Privacy</h2>
+<p>The Service is not directed to children under 13, and we do not
+knowingly collect personal information from children under 13,
+consistent with the Children's Online Privacy Protection Act (COPPA).</p>
+<p><strong>Global minimum age is 13.</strong> Country-specific higher minimums apply
+where local social-media rules require them (Australia, Indonesia, and
+Malaysia: 16; France: 15). Other countries keep the global floor of 13.</p>
+<p><strong>Age assurance.</strong> For restricted countries (and under-16 signups in
+Brazil), signup includes an extra confirmation step. If we learn that
+we've collected personal information from a child under the applicable
+minimum age without required consent, we delete that information and
+terminate the associated account as quickly as practicable. Contact
+loopnod.support@gmail.com if you believe an under-minimum-age child has
+created an account.</p>
+<h3>7.1 Teen accounts (13–17) &amp; parental controls</h3>
+<p>For account holders between 13 and 17, we apply additional default
+protections — see Terms of Service Section 1.4 for the full list
+(private account, restricted messaging, sensitive-content filtering,
+and a daily time limit with break reminders).</p>
+<p>If a teen invites a parent or guardian and that person accepts, we
+link the two accounts and share the teen's daily screen time and their
+current time limit, break reminder, and messaging-permission settings
+with the guardian, who can then adjust them, including whether the
+teen's account is public or private. A linked guardian cannot see the
+teen's private messages, Loops, or Notes through this link, and cannot
+turn off sensitive-content filtering — that protection stays on
+regardless of what anyone sets. The teen can always switch their own
+account back to private; only the linked guardian can make it public
+again. A teen or their linked guardian can end the link at any time
+from Settings, which resets the account's safety settings back to
+their protective defaults and notifies the guardian.</p>
+<h2>8. Security</h2>
+<p>We use industry-standard technical and organizational measures to
+protect your information, including:</p>
+<ul>
+<li>end-to-end encryption for direct message and Group message content,
+  as described in Section 1.3;</li>
+<li>encryption of data in transit (TLS) and at rest for account and
+  content data;</li>
+<li>database-level access controls (Row Level Security) restricting each
+  user's data access to their own account and content they're entitled
+  to see, enforced by our database, not just our application code;</li>
+<li>restricted, audited access to production systems for our own
+  personnel.</li>
+</ul>
+<p>No system is completely secure. If we experience a data breach
+affecting your personal information, we will notify you and relevant
+regulators as required by applicable law.</p>
+<h2>9. International Data Transfers</h2>
+<p>Our infrastructure providers may process and store data in the United
+States and other countries. If you're located outside the United
+States, your information will be transferred to, and processed in, the
+United States and potentially other countries whose data protection
+laws may differ from those of your home jurisdiction. Where required,
+we rely on appropriate safeguards such as Standard Contractual Clauses.</p>
+<h2>10. Cookies &amp; Tracking Technologies</h2>
+<p>The mobile app does not use browser cookies. If you visit a Loopnod
+website (including one hosting these policies), we may use cookies and
+similar technologies as described in our <a href="./cookie-policy.html">Cookie Policy</a>.</p>
+<h2>11. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. For material
+changes, we'll provide notice through the app, by email, or both,
+before the changes take effect. The "Effective Date" at the top of this
+document reflects the last update.</p>
+<h2>12. Contact Us</h2>
+<p>Questions about this Privacy Policy, or to exercise any of the rights
+described in Section 6: loopnod.support@gmail.com</p>
+</main>
+<footer>
+  © Loopnod. Policies listed here apply to the Loopnod app and any Loopnod websites.
+  <div class="foot-links">
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="community-standards.html">Community Standards</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="advertising-policy.html">Advertising Policy</a>
+    <a href="help-center.html">Help Center</a>
+  </div>
+</footer>
+</body>
+</html>

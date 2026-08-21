@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Standards — Loopnod</title>
+<style>
+:root {
+  --ink: #1b1b1f;
+  --muted: #5b5b66;
+  --accent: #6E56CF;
+  --accent2: #FF8F6B;
+  --line: #e6e5ea;
+  --bg: #ffffff;
+  --panel: #ECE9F7;
+  --shadow-dark: rgba(160,155,190,0.55);
+  --shadow-light: rgba(255,255,255,0.9);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+.topbar {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.logo-mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-outer {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-inner {
+  width: 31px; height: 31px; border-radius: 9px;
+  background: var(--panel);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-word { font-weight: 800; font-size: 16px; letter-spacing: 0.2px; color: var(--ink); }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.topbar nav a:hover { color: var(--accent); }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 24px 0;
+}
+.hero .kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: linear-gradient(135deg, rgba(110,86,207,0.12), rgba(255,143,107,0.12));
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.hero h1 { font-size: 30px; margin: 14px 0 6px; }
+.hero .sub { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+h2 { font-size: 20px; margin-top: 2.4em; border-top: 1px solid var(--line); padding-top: 0.9em; }
+h3 { font-size: 16.5px; margin-top: 1.8em; color: #2b2b33; }
+p, li { font-size: 15.5px; color: #2b2b33; }
+strong { color: var(--ink); }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #faf9fc; }
+code { background: #f4f3f7; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5em 0; }
+em { color: #46464f; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 18px 0;
+  background: #fcfbfe;
+}
+.card h3 { margin-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 20px; }
+.pill {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+  background: rgba(110,86,207,0.09); border-radius: 999px; padding: 5px 12px;
+}
+.toc { border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 24px 0 8px; background: #fcfbfe; }
+.toc p { margin: 4px 0; font-size: 14px; }
+.toc a { text-decoration: none; }
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+footer .foot-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer .foot-links a { color: var(--muted); text-decoration: none; font-size: 12.5px; }
+footer .foot-links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="logo-mark" href="terms-of-service.html">
+    <div class="logo-outer">
+    <div class="logo-inner">
+      <svg width="26" height="13" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="infGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6E56CF"/>
+            <stop offset="1" stop-color="#FF8F6B"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 5 C7 5 2 11 2 15 C2 19 7 25 15 25 C22 25 25 19 30 15 C35 11 38 5 45 5 C53 5 58 11 58 15 C58 19 53 25 45 25 C38 25 35 19 30 15 C25 11 22 5 15 5 Z"
+          stroke="url(#infGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <span class="logo-word">Loopnod</span>
+  </a>
+  <nav>
+    <a href="terms-of-service.html" class="">Terms of Service</a>
+    <a href="privacy-policy.html" class="">Privacy Policy</a>
+    <a href="community-standards.html" class="active">Community Standards</a>
+    <a href="cookie-policy.html" class="">Cookie Policy</a>
+    <a href="advertising-policy.html" class="">Advertising Policy</a>
+    <a href="help-center.html" class="">Help Center</a>
+  </nav>
+</div>
+<div class="hero">
+  <span class="kicker">Guidelines</span>
+  <h1>Community Standards</h1>
+  <p class="sub">What's allowed on Loopnod, and how we enforce it.</p>
+</div>
+<main>
+<p><strong>Effective Date:</strong> August 21, 2026 · <strong>Version:</strong> 2026-08-21</p>
+<p>These Community Standards explain what's allowed on Loopnod — in Loops,
+Notes, Status posts, profiles, Groups, and direct messages — and how we
+enforce them. They're incorporated by reference into our <a href="./terms-of-service.html">Terms of Service</a>.
+Public content (Loops, Notes, Status, profiles) is reviewed against
+these Standards through user reports, automated detection, and human
+review. Direct messages and Groups are end-to-end encrypted, so we rely
+primarily on reports from participants for those — see "How we review
+messages" below.</p>
+<h2>1. Safety</h2>
+<h3>Child safety</h3>
+<p>We have zero tolerance for content that sexually exploits or endangers
+a minor, in any form, including AI-generated or fictional depictions.
+This includes grooming behavior even where it doesn't rise to the level
+of exploitative imagery. Violations result in immediate, permanent
+account termination and a mandatory report to the National Center for
+Missing &amp; Exploited Children (NCMEC), as required by U.S. federal law.</p>
+<h3>Harassment, bullying &amp; threats</h3>
+<p>Don't target another person with repeated unwanted contact,
+intimidation, threats, or content designed to demean or degrade them.
+This applies across public posts, Groups, and direct messages.</p>
+<h3>Self-harm, suicide &amp; eating disorders</h3>
+<p>We don't allow content that promotes or facilitates suicide, self-harm,
+or eating disorders. Genuine recovery support, awareness content, and
+personal experience shared in a non-promotional way are allowed.</p>
+<h3>Violent extremism</h3>
+<p>We don't allow content that threatens, incites, promotes, or
+facilitates terrorism or violent extremism, or that glorifies violent
+extremist organizations or individuals.</p>
+<h3>Human trafficking &amp; exploitation</h3>
+<p>We don't allow content that facilitates human trafficking or
+exploitation of any kind.</p>
+<h2>2. Respectful Behavior</h2>
+<h3>Hate speech</h3>
+<p>We don't allow content that discriminates against or incites hatred
+toward individuals or groups based on race, ethnicity, national origin,
+religion, disability, gender, gender identity, sexual orientation, age,
+or veteran status.</p>
+<h3>Non-consensual intimate imagery</h3>
+<p>We don't allow sharing intimate images or video of someone without
+their consent, regardless of how the content was originally obtained.</p>
+<h3>Doxxing</h3>
+<p>Don't post another person's private information — home address, phone
+number, financial information, government ID, or similar — without
+their consent.</p>
+<h3>Impersonation</h3>
+<p>Don't create an account, profile, or piece of content designed to
+impersonate another person or entity or deceive others about who
+you are. Parody and commentary accounts are fine as long as they're not
+designed to mislead.</p>
+<h2>3. Groups</h2>
+<p>Groups are a shared space, and the person who adds you controls that
+first step — being added to a Group doesn't require your advance
+approval, similar to most group-messaging products. From there:</p>
+<ul>
+<li><strong>Add people in good faith.</strong> Only add someone to a Group if you
+  reasonably believe they want to be there. Repeatedly re-adding
+  someone who has left, or using Group invitations to get around a
+  block, is treated as harassment.</li>
+<li><strong>Admins set the tone.</strong> Group admins can add or remove members,
+  promote or demote other admins, and optionally restrict posting to
+  admins only. Use these controls fairly — using them to retaliate
+  against or silence a member in bad faith is a violation.</li>
+<li><strong>You can always leave.</strong> Any member can leave a Group at any time,
+  regardless of what an admin has restricted.</li>
+<li><strong>Report and block work the same as everywhere else.</strong> If a Group or
+  a member in it violates these Standards, you can leave, block the
+  member, and report it to us.</li>
+</ul>
+<h2>4. Platform Integrity</h2>
+<h3>Spam &amp; fake engagement</h3>
+<p>Don't send bulk unsolicited messages, run fraudulent schemes, solicit
+for pyramid or multi-level-marketing schemes, or use bots/scripts/fake
+accounts to inflate followers, likes, or other engagement metrics. To
+help keep this in check, the Service applies automated limits on how
+quickly you can post, follow, or message in a short period — you'll
+see a brief message if you hit one.</p>
+<h3>Security</h3>
+<p>Don't attempt unauthorized access to any account or system, distribute
+malware, scrape the Service outside our published API terms, or
+attempt to intercept, tamper with, or circumvent the encryption used
+for direct messages and Group messages.</p>
+<h3>One account per person</h3>
+<p>Multiple accounts used to evade a suspension, manipulate engagement, or
+otherwise get around these Standards are not allowed.</p>
+<h2>5. Intellectual Property</h2>
+<p>Don't post content that infringes someone else's copyright, trademark,
+or other intellectual property rights. If you believe your copyright
+has been infringed, see the DMCA process in our <a href="./terms-of-service.html#10-intellectual-property--dmca">Terms of Service</a>.</p>
+<h2>6. How We Review Content &amp; Messages</h2>
+<p><strong>Public content</strong> (Loops, Notes, Status posts, profiles) can be
+reviewed by us directly — through reports, automated tools, and human
+moderators — because it isn't end-to-end encrypted.</p>
+<p><strong>Direct messages and Group messages</strong> are end-to-end encrypted, so we
+cannot read their content. Any participant can report something they've
+personally received, since they can see it decrypted on their own
+device; from there, we can act on the report, on message/Group
+metadata, and on patterns across multiple reports, even without
+ourselves having read the underlying content.</p>
+<h2>7. Enforcement</h2>
+<p>Depending on the severity and pattern of a violation, we may: leave
+content up with a warning label; reduce its visibility; remove it;
+issue a warning to the account; temporarily restrict features (like
+posting or messaging); or suspend or permanently terminate the account.
+Severe violations, including CSAM and credible threats of violence,
+result in immediate termination and, where legally required, a report
+to law enforcement or NCMEC — without warning.</p>
+<p>We'll generally let you know the reason for an enforcement action where
+we can do so without compromising an investigation or violating a legal
+obligation. If you believe an enforcement action was made in error, you
+can appeal it through the in-app reporting flow or by contacting us at
+loopnod.support@gmail.com.</p>
+<h2>8. Reporting Tools</h2>
+<p>Use the in-app Report and Block/Mute tools whenever you encounter
+content or behavior that violates these Standards. Report in good
+faith — don't submit false or malicious reports to harass another user
+or suppress content you simply disagree with.</p>
+<h2>Contact</h2>
+<p>Questions about these Standards: loopnod.support@gmail.com</p>
+</main>
+<footer>
+  © Loopnod. Policies listed here apply to the Loopnod app and any Loopnod websites.
+  <div class="foot-links">
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="advertising-policy.html">Advertising Policy</a>
+    <a href="help-center.html">Help Center</a>
+  </div>
+</footer>
+</body>
+</html>

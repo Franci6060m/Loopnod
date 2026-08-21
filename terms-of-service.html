@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Loopnod</title>
+<style>
+:root {
+  --ink: #1b1b1f;
+  --muted: #5b5b66;
+  --accent: #6E56CF;
+  --accent2: #FF8F6B;
+  --line: #e6e5ea;
+  --bg: #ffffff;
+  --panel: #ECE9F7;
+  --shadow-dark: rgba(160,155,190,0.55);
+  --shadow-light: rgba(255,255,255,0.9);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+.topbar {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.logo-mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-outer {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-inner {
+  width: 31px; height: 31px; border-radius: 9px;
+  background: var(--panel);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-word { font-weight: 800; font-size: 16px; letter-spacing: 0.2px; color: var(--ink); }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.topbar nav a:hover { color: var(--accent); }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 24px 0;
+}
+.hero .kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: linear-gradient(135deg, rgba(110,86,207,0.12), rgba(255,143,107,0.12));
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.hero h1 { font-size: 30px; margin: 14px 0 6px; }
+.hero .sub { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+h2 { font-size: 20px; margin-top: 2.4em; border-top: 1px solid var(--line); padding-top: 0.9em; }
+h3 { font-size: 16.5px; margin-top: 1.8em; color: #2b2b33; }
+p, li { font-size: 15.5px; color: #2b2b33; }
+strong { color: var(--ink); }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #faf9fc; }
+code { background: #f4f3f7; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5em 0; }
+em { color: #46464f; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 18px 0;
+  background: #fcfbfe;
+}
+.card h3 { margin-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 20px; }
+.pill {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+  background: rgba(110,86,207,0.09); border-radius: 999px; padding: 5px 12px;
+}
+.toc { border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 24px 0 8px; background: #fcfbfe; }
+.toc p { margin: 4px 0; font-size: 14px; }
+.toc a { text-decoration: none; }
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+footer .foot-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer .foot-links a { color: var(--muted); text-decoration: none; font-size: 12.5px; }
+footer .foot-links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="logo-mark" href="terms-of-service.html">
+    <div class="logo-outer">
+    <div class="logo-inner">
+      <svg width="26" height="13" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="infGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6E56CF"/>
+            <stop offset="1" stop-color="#FF8F6B"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 5 C7 5 2 11 2 15 C2 19 7 25 15 25 C22 25 25 19 30 15 C35 11 38 5 45 5 C53 5 58 11 58 15 C58 19 53 25 45 25 C38 25 35 19 30 15 C25 11 22 5 15 5 Z"
+          stroke="url(#infGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <span class="logo-word">Loopnod</span>
+  </a>
+  <nav>
+    <a href="terms-of-service.html" class="active">Terms of Service</a>
+    <a href="privacy-policy.html" class="">Privacy Policy</a>
+    <a href="community-standards.html" class="">Community Standards</a>
+    <a href="cookie-policy.html" class="">Cookie Policy</a>
+    <a href="advertising-policy.html" class="">Advertising Policy</a>
+    <a href="help-center.html" class="">Help Center</a>
+  </nav>
+</div>
+<div class="hero">
+  <span class="kicker">Legal</span>
+  <h1>Terms of Service</h1>
+  <p class="sub">The agreement between you and Loopnod for using the app.</p>
+</div>
+<main>
+<p><strong>Effective Date:</strong> August 21, 2026 · <strong>Version:</strong> 2026-08-21</p>
+<p>These Terms of Service ("<strong>Terms</strong>") are a legal agreement between you
+("<strong>you</strong>," "<strong>User</strong>") and Francis&M_Tech ("<strong>Loopnod</strong>,"
+"<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), governing your access to and use of the
+Loopnod mobile application, related services, and any websites we
+operate in connection with it (together, the "<strong>Service</strong>").</p>
+<p>By creating an account, or by accessing or using the Service in any way,
+you agree to be bound by these Terms and by our <a href="./privacy-policy.html">Privacy Policy</a>
+and <a href="./community-standards.html">Community Standards</a>, which are incorporated
+into these Terms by reference. If you do not agree, do not use the Service.</p>
+<h2>1. Eligibility &amp; Age Requirements</h2>
+<h3>1.1 Minimum age</h3>
+<p>You must be at least <strong>13 years old</strong> to create an account or use the
+Service. Where local law sets a higher minimum age for social media
+accounts, that higher minimum applies to users who select that country
+at signup:</p>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Minimum age to create an account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Australia</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Indonesia</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Malaysia</td>
+<td>16</td>
+</tr>
+<tr>
+<td>France</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Users in all other countries are subject to the global minimum of 13.
+If your jurisdiction sets a higher digital consent age under local
+privacy law (for example, GDPR Article 8 in some EU member states), you
+must also meet that age, or have verifiable parental or guardian consent
+as required by that law.</p>
+<h3>1.2 Age assurance</h3>
+<p>We ask for your age and country at signup. For countries with a higher
+minimum age (see 1.1 above), and for under-16 signups in Brazil, signup
+includes an additional confirmation step. If we learn that an account
+belongs to someone below the applicable minimum age for their country,
+we will terminate the account and delete associated data as described
+in our Privacy Policy.</p>
+<h3>1.3 Other eligibility requirements</h3>
+<p>By using the Service, you represent and warrant that:</p>
+<ul>
+<li>you are legally capable of entering into a binding contract in your
+  jurisdiction (or, where a minor is legally permitted to use the
+  Service, that a parent or guardian has agreed to these Terms on your
+  behalf, where required);</li>
+<li>you are not barred from using the Service under applicable law,
+  including export control and sanctions laws, and are not on any
+  denied-party or sanctions list maintained by the U.S. government or
+  any other applicable government;</li>
+<li>you have not previously been banned from the Service for violating
+  these Terms, unless we have expressly reinstated you.</li>
+</ul>
+<h3>1.4 Teen accounts (13–17) &amp; parental controls</h3>
+<p>Accounts registered with an age between 13 and 17 receive additional
+protections by default:</p>
+<ul>
+<li><strong>Private by default.</strong> Only followers you approve can see your loops
+  and status updates.</li>
+<li><strong>Restricted messaging.</strong> Only accounts you follow can send you a
+  direct message.</li>
+<li><strong>Sensitive content filtering.</strong> Content flagged as sensitive is
+  hidden behind a warning across your feed rather than shown outright.</li>
+<li><strong>Daily time limit &amp; break reminders</strong>, on by default and adjustable
+  by you or by a linked parent/guardian.</li>
+</ul>
+<p>You can invite a parent or guardian to link to your account from
+Screen Time &amp; Safety in Settings. Once linked, they can view your daily
+screen time and adjust your time limit, break reminders, messaging
+permission, and whether your account is public or private. Sensitive
+content filtering can never be turned off, by you or by a guardian.
+You can always switch your own account back to private at any time;
+turning it public again requires a linked guardian to do so. Before a
+guardian is linked, your account stays private and this can't be
+changed. Disconnecting a linked guardian — by either of you — resets
+these settings back to their protective defaults and notifies the
+guardian. Turning 18 lifts these restrictions automatically.</p>
+<h2>2. Description of the Service</h2>
+<p>Loopnod is a social and messaging platform that lets you create an
+account; share posts ("<strong>Loops</strong>") including photos, video, text, polls,
+and audio; comment on posts ("<strong>Notes</strong>"); follow other users; post
+short-lived stories ("<strong>Status</strong>"); send end-to-end encrypted direct
+messages, including text, voice notes, and shared audio clips, to
+individual users; create and participate in end-to-end encrypted
+<strong>Groups</strong>; browse and upload music tracks, with the option for
+artists to allow offline downloads of their own tracks; and back up your
+messages to your own cloud storage.</p>
+<h3>2.1 Groups</h3>
+<p>Any user can create a Group and add other members to it. Every Group
+has at least one <strong>admin</strong> — its creator, initially — who can add or
+remove members, promote or demote other members to/from admin, rename
+the Group, and optionally restrict posting to admins only. Any member
+can leave a Group at any time. Group creators and admins are expected
+to add people in good faith; using Group invitations to harass, spam,
+or repeatedly re-add someone who has left is treated as harassment
+under Section 4 below and enforced accordingly. If you're added
+somewhere you don't want to be, or experience harassment inside a
+Group, you can leave, block the member involved, and report it to us —
+see Section 5.4.</p>
+<h3>2.2 How content is shown to you</h3>
+<p>Feeds in the Service (Loops, Notes, Status) are shown in follow-based,
+reverse-chronological order. We do not operate an engagement-optimizing
+ranking algorithm, and we do not push algorithmically-recommended
+content from accounts you don't follow into your main feed.</p>
+<p>We may add, change, or remove features at any time, and nothing in
+these Terms obligates us to maintain any particular feature
+indefinitely.</p>
+<h2>3. Accounts &amp; Registration</h2>
+<h3>3.1 Accuracy of information</h3>
+<p>You agree to provide accurate, current, and complete information when
+you register, and to keep it up to date. You may not impersonate any
+person or entity, or misrepresent your affiliation with one.</p>
+<h3>3.2 One account per person</h3>
+<p>You may not create more than one account for purposes of evading a
+suspension or ban, manipulating engagement metrics, or otherwise
+circumventing these Terms.</p>
+<h3>3.3 Account security</h3>
+<p>You are responsible for maintaining the confidentiality of your
+password and for all activity that occurs under your account. Notify
+us immediately at loopnod.support@gmail.com if you become aware of any
+unauthorized use of your account.</p>
+<h3>3.4 Username changes</h3>
+<p>Usernames may be changed no more than once every 30 days. We reserve
+the right to reclaim or reassign usernames that are inactive, infringe
+a trademark, or are being squatted on or used in bad faith.</p>
+<h2>4. Your Content</h2>
+<h3>4.1 You own what you create</h3>
+<p>You retain all ownership rights in the photos, videos, text, audio, and
+other content you post or transmit through the Service ("<strong>User
+Content</strong>"). We claim no ownership over your User Content.</p>
+<h3>4.2 The license you grant us</h3>
+<p>By posting User Content to any part of the Service that is not
+end-to-end encrypted (Loops, Notes, Status posts, your profile, and
+public track uploads — <strong>not</strong> your direct messages or Group messages,
+which we cannot access), you grant Loopnod a worldwide, non-exclusive,
+royalty-free, sublicensable, transferable license to host, store,
+reproduce, modify (for example, to resize an image or transcode a video
+for different devices), publish, publicly display, publicly perform,
+and distribute that content, solely to operate, develop, provide, and
+improve the Service.</p>
+<p>This license ends when you delete the specific content or your
+account, except that it continues (a) for the time reasonably needed to
+complete deletion from backups and caches, (b) with respect to content
+others have re-shared to the extent your original post is legitimately
+incorporated into theirs, and (c) where retention is legally required.
+This license does not give us any right to sell your User Content to
+third parties as standalone data, or to use it for purposes unrelated
+to operating the Service, without your separate, explicit consent.</p>
+<h3>4.3 Your representations about your content</h3>
+<p>By posting User Content, you represent and warrant that you own it or
+have all necessary rights and permissions to post it and grant the
+license above; that it does not infringe any third party's rights;
+that it complies with these Terms and our Community Standards; and
+that it does not depict or sexualize a minor in any form, including
+AI-generated or fictional depictions.</p>
+<h3>4.4 We are not responsible for User Content</h3>
+<p>Loopnod does not pre-screen User Content before it's posted, and we are
+not responsible or liable for content posted by other users. Where
+applicable U.S. law permits, we rely on Section 230 of the
+Communications Decency Act and equivalent protections elsewhere in
+treating User Content as the responsibility of the user who posted it.</p>
+<h2>5. Prohibited Conduct</h2>
+<p>Our full, detailed conduct rules live in our <a href="./community-standards.html">Community Standards</a>,
+which are incorporated into these Terms by reference. At a minimum, you
+agree not to, and not to assist or enable others to:</p>
+<ul>
+<li>post or transmit content that is illegal, that sexually exploits or
+  endangers a minor in any way, that promotes terrorism or violent
+  extremism, or that promotes suicide, self-harm, or eating disorders;</li>
+<li>harass, bully, stalk, threaten, dox, or impersonate another user, or
+  post non-consensual intimate imagery;</li>
+<li>discriminate against or incite hatred toward individuals or groups
+  based on a protected characteristic;</li>
+<li>add another user to a Group without a good-faith belief they want to
+  be there, or use Group invitations to route around a block placed
+  against you (see Section 2.1);</li>
+<li>attempt unauthorized access to any account or system, interfere with
+  the Service's infrastructure, distribute malware, or circumvent any
+  security feature, including the encryption described in Section 7 or
+  the protections on offline downloads and chat backups;</li>
+<li>infringe anyone's intellectual property rights, or use Loopnod's
+  name, logo, or trademarks without our written permission.</li>
+</ul>
+<p>We may investigate and take any action we deem appropriate — including
+content removal, account suspension or termination, and reporting to
+law enforcement — for violations of this Section, with or without
+notice.</p>
+<h2>6. Content Moderation &amp; Enforcement</h2>
+<h3>6.1 What we can moderate</h3>
+<p>Loops, Notes, Status posts, profiles, and other public content are not
+end-to-end encrypted; we can and do moderate this content through user
+reports, automated detection tools, and human review, and may remove
+it or take action against the account, at our discretion, for a
+violation of these Terms, our Community Standards, or applicable law.</p>
+<p>Direct messages and Group messages are end-to-end encrypted (see
+Section 7), so we cannot read their content or proactively scan them.
+Any participant can report content they've personally received, since
+they can see it decrypted on their own device. We can also act on
+message metadata (who's messaging whom, who's in a Group) and on
+patterns of reports, and we comply with valid legal process to the
+extent the technical design of end-to-end encryption allows.</p>
+<h3>6.2 CSAM — zero tolerance and mandatory reporting</h3>
+<p>We have zero tolerance for content that sexually exploits or endangers
+children. Where we become aware of apparent CSAM, U.S. federal law (18
+U.S.C. § 2258A) requires us to report it to the National Center for
+Missing &amp; Exploited Children (NCMEC) and preserve relevant records, and
+we do so, cooperating with law enforcement to the fullest extent
+required and permitted by law. Accounts involved in violating this
+provision are permanently terminated and reported, without warning.</p>
+<h3>6.3 Our enforcement rights</h3>
+<p>We reserve the right to remove or restrict any User Content; suspend,
+restrict, or terminate any account, with or without prior notice; and
+refuse service to anyone, at our sole discretion, for a violation of
+these Terms or applicable law. We will generally attempt to notify you
+of the reason for enforcement action where legally permitted and where
+doing so would not compromise an investigation.</p>
+<h3>6.4 Reporting tools</h3>
+<p>The Service provides in-app mechanisms to report content and to block
+or mute other users. Use these tools in good faith, and do not submit
+false or malicious reports intended to harass another user or suppress
+legitimate content.</p>
+<h2>7. Messaging &amp; End-to-End Encryption</h2>
+<p>Direct messages (text, voice notes, and shared audio clips) use a
+Double Ratchet encryption scheme with a full X3DH handshake, providing
+forward secrecy and post-compromise security. Group messages use a
+sender-key scheme, where each member encrypts once with their own key
+chain, which is rotated automatically whenever a Group's membership
+changes.</p>
+<p>We provide a "safety number" verification feature for 1:1 conversations
+that lets you independently confirm you're talking to the device you
+think you are; we encourage you to use it for sensitive conversations.</p>
+<p><strong>By default, there is no message backup or account recovery for
+encrypted content</strong>, for either direct messages or Group messages: the
+private keys that decrypt your messages live only on your device(s),
+and we do not build any server-side mechanism to back them up, escrow
+them, or recover them. If you sign out, uninstall the app, or lose
+every device those keys were on — without chat backup turned on and
+with no other linked device to sync from (see below) — the messages
+that were only there are unrecoverable, including by us.</p>
+<h3>7.1 Chat backups (optional)</h3>
+<p>You can choose to back up your chats from Settings → Chats → Chat
+backup. This is off by default. When it's on, your backup is saved to
+your own Google Drive — a private storage area tied to your Google
+account, not to Loopnod — and we never receive or keep a copy of it on
+our servers.</p>
+<ul>
+<li><strong>End-to-end encrypted backup.</strong> Protected by a backup
+  password or key that only you create and hold. We never receive, see,
+  log, or store this password or key. If you lose it, the backup cannot
+  be recovered — by you or by us. There is no "forgot password" option
+  for an encrypted backup.</li>
+<li><strong>Standard backup.</strong> Protected using your regular
+  account sign-in instead of a separate password, so there's nothing
+  extra to remember — but it also means anyone who can access your
+  account can access this backup.</li>
+</ul>
+<p>You control how often backups run, and you can turn chat backup off or
+delete an existing backup at any time, from the app or directly in your
+Google Drive.</p>
+<h3>7.2 Linking a device shares your history</h3>
+<p>Linking a new device (Settings → Linked Devices) can bring over your
+past conversation history from one of your other active devices,
+instead of starting empty. This happens directly between your own
+devices and stays end-to-end encrypted along the way. If every device
+on your account is ever lost at once, with no device left to sync from
+and no chat backup turned on, that history is still gone for good.</p>
+<p>Message and Group <em>metadata</em> — who you're messaging, who's in a Group
+and with what role, when messages were sent, and approximate file
+size/duration of voice notes — is not end-to-end encrypted and is
+visible to us as the service operator. See our <a href="./privacy-policy.html">Privacy Policy</a>
+for the full detail on what we can and cannot see, including for chat
+backups.</p>
+<p>We make no representation that this encryption implementation is
+suitable for protecting against nation-state-level adversaries or
+provides absolute security. You use the messaging features of the
+Service at your own risk, and should not rely on it as your sole
+protection for information where a breach would cause severe harm.</p>
+<h2>8. Purchases &amp; Subscriptions</h2>
+<p>Loopnod is currently provided free of charge. We reserve the right to
+introduce paid features in the future, with advance notice and updated
+Terms covering the applicable billing arrangement.</p>
+<h2>9. Push Notifications &amp; Communications</h2>
+<p>By creating an account, you consent to receive push notifications
+related to Service activity (messages, follows, likes, etc.), which
+you can disable at any time through device settings or in-app
+notification preferences. We may also send you service-related emails
+(security alerts, verification codes) that are not optional while you
+maintain an account, and, separately, marketing communications, which
+you may opt out of at any time.</p>
+<h2>10. Intellectual Property &amp; DMCA</h2>
+<h3>10.1 Our IP</h3>
+<p>The Service, including its design, software, trademarks, and all
+content we (rather than users) create, is owned by Loopnod or our
+licensors and protected by intellectual property laws. Nothing in
+these Terms grants you any right to use our trademarks, logos, or
+brand features without separate written permission.</p>
+<h3>10.2 DMCA takedown notices</h3>
+<p>If you believe content on the Service infringes your copyright, send a
+notice to our designated agent that includes: a signature of the
+copyright owner or authorized agent; identification of the copyrighted
+work and the allegedly infringing material; your contact information;
+a good-faith statement that the use is unauthorized; and a statement
+under penalty of perjury that the notice is accurate.</p>
+<p><strong>Copyright reports:</strong> loopnod.support@gmail.com — please put
+"DMCA" or "Copyright" in the subject line and describe the issue
+clearly so it reaches the right person.</p>
+<p>We will remove or disable access to material identified in a valid
+notice, notify the user who posted it, and process any valid
+counter-notice consistent with 17 U.S.C. § 512. We maintain a policy of
+terminating, in appropriate circumstances, accounts of repeat
+infringers.</p>
+<h2>11. Third-Party Services</h2>
+<p>The Service relies on third-party infrastructure providers, currently
+including Supabase for backend/database services and push notification
+providers, among others as the Service evolves — see our <a href="./privacy-policy.html">Privacy Policy</a>
+for the current list. We are not responsible for the availability,
+content, or practices of these third parties beyond our contractual
+relationship with them.</p>
+<h2>12. Disclaimers</h2>
+<p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES
+OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT
+LIMITATION IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. We do not warrant that
+the Service will be uninterrupted, timely, secure, or error-free, or
+that the Service is free of viruses or other harmful components. We do
+not warrant the accuracy, completeness, or reliability of any User
+Content. Some jurisdictions do not allow the exclusion of certain
+warranties, so some of the above exclusions may not apply to you.</p>
+<h2>13. Limitation of Liability</h2>
+<p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, LOOPNOD AND ITS
+OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
+INCLUDING LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES,
+ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE, ANY CONDUCT
+OR CONTENT OF ANY USER, OR UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR
+TRANSMISSIONS OR CONTENT.</p>
+<p>OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM ARISING FROM OR RELATING TO
+THESE TERMS OR THE SERVICE WILL NOT EXCEED THE GREATER OF (A) THE
+AMOUNT YOU PAID US, IF ANY, IN THE 12 MONTHS BEFORE THE CLAIM AROSE, OR
+(B) ONE HUNDRED U.S. DOLLARS ($100).</p>
+<p>Some jurisdictions do not allow the limitation or exclusion of
+liability for incidental or consequential damages, so some of the
+above limitations may not apply to you. Nothing in these Terms limits
+liability that cannot legally be limited, including liability for our
+own fraud, gross negligence, or willful misconduct where applicable law
+prohibits limiting such liability.</p>
+<h2>14. Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless Loopnod and its
+officers, directors, employees, and agents from and against any
+claims, liabilities, damages, losses, and expenses, including
+reasonable attorneys' fees, arising out of or in connection with: (a)
+your access to or use of the Service; (b) your User Content; (c) your
+violation of these Terms; or (d) your violation of any third party's
+rights.</p>
+<h2>15. Termination</h2>
+<h3>15.1 By you</h3>
+<p>You may delete your account at any time through in-app settings. Upon
+deletion, we handle your data as described in our Privacy Policy.</p>
+<h3>15.2 By us</h3>
+<p>We may suspend or terminate your account or access to the Service,
+with or without notice, for violation of these Terms, extended
+inactivity, suspected fraudulent or illegal activity, or a legal or
+regulatory requirement to do so.</p>
+<h3>15.3 Effect of termination</h3>
+<p>Upon termination, your right to use the Service ends immediately.
+Sections of these Terms that by their nature should survive
+termination (including Sections 4.2's post-deletion retention
+provisions, 10, 12, 13, 14, 17, and 18) will survive.</p>
+<h2>16. Governing Law, Venue &amp; Dispute Resolution</h2>
+<h3>16.1 Governing law</h3>
+<p>These Terms are governed by the laws of Uganda, without
+regard to its conflict-of-law principles, except to the extent a
+mandatory consumer-protection law of your country of residence
+provides otherwise and cannot be waived by contract.</p>
+<h3>16.2 Informal resolution first</h3>
+<p>Before filing a claim, you agree to try to resolve the dispute
+informally by contacting us at loopnod.support@gmail.com and describing
+the issue. We'll try to resolve it within 30 days.</p>
+<h3>16.3 Venue</h3>
+<p>For any dispute not resolved informally, you agree to the exclusive
+jurisdiction of the courts of Uganda, except where applicable
+consumer-protection law in your country of residence requires a
+different venue.</p>
+<h2>17. Changes to These Terms</h2>
+<p>We may modify these Terms from time to time. For material changes, we
+will provide notice — through the app, by email, or both — at least
+30 days before the changes take effect, except where a change is
+required by law to take effect sooner. Continued use of the Service
+after a change takes effect constitutes acceptance of the revised
+Terms.</p>
+<h2>18. General Provisions</h2>
+<p><strong>Entire agreement.</strong> These Terms, together with our Privacy Policy and
+Community Standards, constitute the entire agreement between you and
+Loopnod regarding the Service.</p>
+<p><strong>Severability.</strong> If any provision of these Terms is found
+unenforceable, that provision will be limited or eliminated to the
+minimum extent necessary, and the remaining provisions will remain in
+full force.</p>
+<p><strong>No waiver.</strong> Our failure to enforce any right or provision of these
+Terms is not a waiver of that right or provision.</p>
+<p><strong>Assignment.</strong> You may not assign or transfer these Terms without our
+prior written consent. We may assign these Terms without restriction,
+including in connection with a merger, acquisition, or sale of assets.</p>
+<p><strong>Force majeure.</strong> We are not liable for any failure or delay in
+performance resulting from causes beyond our reasonable control.</p>
+<h2>19. Contact</h2>
+<p>Questions about these Terms: loopnod.support@gmail.com
+Legal notices: loopnod.support@gmail.com (put "Legal notice" in the subject line)
+Security issues: loopnod.support@gmail.com
+DMCA notices: see Section 10.2</p>
+</main>
+<footer>
+  © Loopnod. Policies listed here apply to the Loopnod app and any Loopnod websites.
+  <div class="foot-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="community-standards.html">Community Standards</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="advertising-policy.html">Advertising Policy</a>
+    <a href="help-center.html">Help Center</a>
+  </div>
+</footer>
+</body>
+</html>

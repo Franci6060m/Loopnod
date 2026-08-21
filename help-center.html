@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Center — Loopnod</title>
+<style>
+:root {
+  --ink: #1b1b1f;
+  --muted: #5b5b66;
+  --accent: #6E56CF;
+  --accent2: #FF8F6B;
+  --line: #e6e5ea;
+  --bg: #ffffff;
+  --panel: #ECE9F7;
+  --shadow-dark: rgba(160,155,190,0.55);
+  --shadow-light: rgba(255,255,255,0.9);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+.topbar {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.logo-mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-outer {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-inner {
+  width: 31px; height: 31px; border-radius: 9px;
+  background: var(--panel);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-word { font-weight: 800; font-size: 16px; letter-spacing: 0.2px; color: var(--ink); }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.topbar nav a:hover { color: var(--accent); }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 24px 0;
+}
+.hero .kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: linear-gradient(135deg, rgba(110,86,207,0.12), rgba(255,143,107,0.12));
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.hero h1 { font-size: 30px; margin: 14px 0 6px; }
+.hero .sub { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+h2 { font-size: 20px; margin-top: 2.4em; border-top: 1px solid var(--line); padding-top: 0.9em; }
+h3 { font-size: 16.5px; margin-top: 1.8em; color: #2b2b33; }
+p, li { font-size: 15.5px; color: #2b2b33; }
+strong { color: var(--ink); }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #faf9fc; }
+code { background: #f4f3f7; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5em 0; }
+em { color: #46464f; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 18px 0;
+  background: #fcfbfe;
+}
+.card h3 { margin-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 20px; }
+.pill {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+  background: rgba(110,86,207,0.09); border-radius: 999px; padding: 5px 12px;
+}
+.toc { border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 24px 0 8px; background: #fcfbfe; }
+.toc p { margin: 4px 0; font-size: 14px; }
+.toc a { text-decoration: none; }
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+footer .foot-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer .foot-links a { color: var(--muted); text-decoration: none; font-size: 12.5px; }
+footer .foot-links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="logo-mark" href="terms-of-service.html">
+    <div class="logo-outer">
+    <div class="logo-inner">
+      <svg width="26" height="13" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="infGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6E56CF"/>
+            <stop offset="1" stop-color="#FF8F6B"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 5 C7 5 2 11 2 15 C2 19 7 25 15 25 C22 25 25 19 30 15 C35 11 38 5 45 5 C53 5 58 11 58 15 C58 19 53 25 45 25 C38 25 35 19 30 15 C25 11 22 5 15 5 Z"
+          stroke="url(#infGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <span class="logo-word">Loopnod</span>
+  </a>
+  <nav>
+    <a href="terms-of-service.html" class="">Terms of Service</a>
+    <a href="privacy-policy.html" class="">Privacy Policy</a>
+    <a href="community-standards.html" class="">Community Standards</a>
+    <a href="cookie-policy.html" class="">Cookie Policy</a>
+    <a href="advertising-policy.html" class="">Advertising Policy</a>
+    <a href="help-center.html" class="active">Help Center</a>
+  </nav>
+</div>
+<div class="hero">
+  <span class="kicker">Support</span>
+  <h1>Help Center</h1>
+  <p class="sub">Guided articles for using Loopnod's features and troubleshooting issues.</p>
+</div>
+<main>
+<p>Guided articles for getting the most out of Loopnod, and for staying
+safe while you do. Can't find what you need? Contact us at
+loopnod.support@gmail.com.</p>
+<h2>Getting Started</h2>
+<h3>Creating an account</h3>
+<p>Download Loopnod, tap Sign Up, and enter your email or phone number,
+a password, your country, and your age. Your country and age determine
+which age-related protections apply to your account — see "Teen
+accounts &amp; Family Center" below.</p>
+<h3>Completing your profile</h3>
+<p>After signup, add a display name, username, bio, and avatar photo from
+Complete Profile. You can change your username once every 30 days from
+Settings → Edit Profile.</p>
+<h3>Verification</h3>
+<p>Apply for a verified badge from Settings → Apply for Verification if
+you're a notable individual, creator, or organization. Review typically
+covers authenticity of the account and identity, not follower count.</p>
+<h2>Posting &amp; Sharing</h2>
+<h3>Posting a Loop</h3>
+<p>Tap the Create button to share a Loop — a photo, video, text post,
+poll, or audio clip. Loops appear in your followers' feeds in
+reverse-chronological order; we don't use an engagement-ranking
+algorithm to reorder what people see.</p>
+<h3>Commenting with Notes</h3>
+<p>Tap the comment icon on any Loop to leave a Note. You can delete your
+own Notes at any time, and Loop authors can remove Notes on their own
+posts.</p>
+<h3>Posting a Status</h3>
+<p>Status posts are short-lived updates visible to your followers (or
+approved followers only, if your account is private). Tap the Status
+tab to create one, and Status Style to customize its appearance. You
+can see who's viewed your Status from Status Viewers.</p>
+<h2>Messaging &amp; Groups</h2>
+<h3>Starting a direct message</h3>
+<p>Direct messages are end-to-end encrypted — text, voice notes, and
+shared audio clips. Open Messages, tap Compose, and pick a recipient.
+Because of how end-to-end encryption works, your messages live on your
+own devices, not ours. Turn on chat backup or link an additional
+device (see below) if you want a way to keep your history if something
+happens to your only device — without either, losing every device your
+keys were on means that conversation history is gone for good,
+including for us.</p>
+<h3>Backing up your chats</h3>
+<p>From Settings → Chats → Chat backup, you can save your messages to
+your own Google Drive. Choose:</p>
+<ul>
+<li><strong>End-to-end encrypted backup</strong> — set a backup
+  password or key yourself, and keep it somewhere safe. We never see
+  or store it, so we cannot recover it or your backup if it's lost.</li>
+<li><strong>Standard backup</strong> — protected by your account
+  sign-in instead, so there's no extra password to remember.</li>
+</ul>
+<p>Pick how often backups run, and turn chat backup off or delete a
+backup at any time — from the app or directly in your Google Drive.</p>
+<h3>Restoring your chats</h3>
+<p>On a new or reset device, choose Recover Messages during setup (or
+Settings → Chats → Recover Messages) and pick a backup to restore from.
+Recovered messages open in a separate, read-only Recovered Messages
+view, so they don't get mixed into your current conversations.</p>
+<h3>Verifying a safety number</h3>
+<p>For a sensitive conversation, open the chat, tap the contact's name,
+and select Safety Number to confirm you're talking to the device you
+think you are. This protects against a compromised key exchange that
+encryption alone can't catch.</p>
+<h3>Creating and managing a Group</h3>
+<p>Tap Groups → New Group, name it, and add members. As the creator,
+you're the first admin. From Group Info you can:</p>
+<ul>
+<li>add or remove members (admins only);</li>
+<li>promote or demote members to/from admin;</li>
+<li>turn on "Only admins can send" to restrict posting;</li>
+<li>leave the Group at any time, whatever your role.</li>
+</ul>
+<p>Group messages are end-to-end encrypted the same way direct messages
+are — we can't read their content. Anyone currently in the Group can
+read what's sent to it, so only add people you trust with that.</p>
+<h3>Leaving or reporting a Group</h3>
+<p>Open Group Info and tap Leave Group at the bottom. If you're being
+harassed by a specific member, block them from their profile and
+report the behavior to us at loopnod.support@gmail.com with as much
+detail as you can share — since Group content is encrypted, a direct
+report from you is what lets us look into it.</p>
+<h2>Privacy &amp; Safety</h2>
+<h3>Blocking and muting</h3>
+<p>Open a user's profile → the "…" menu → Block or Mute. Blocking prevents
+them from following you, messaging you, or adding you to new Groups
+going forward; muting hides their content from your feed without
+notifying them.</p>
+<h3>Reporting content</h3>
+<p>Long-press any Loop, Note, Status, or direct message (from someone
+else) and tap Report. Reports are reviewed against our
+<a href="./community-standards.html">Community Standards</a>.</p>
+<h3>Restricted messaging (teen accounts)</h3>
+<p>Accounts registered as 13–17 can only be messaged directly by accounts
+they follow. This applies to 1:1 direct messages.</p>
+<h3>Sensitive content filtering</h3>
+<p>Content flagged as sensitive is hidden behind a warning label instead
+of shown outright. This is on by default for teen accounts and cannot
+be turned off by a linked guardian.</p>
+<h2>Teen Accounts &amp; Family Center</h2>
+<h3>What teen accounts get by default</h3>
+<p>Accounts registered as 13–17 automatically get: a private account,
+restricted messaging, sensitive content filtering, and a daily time
+limit with break reminders. See our <a href="./terms-of-service.html#14-teen-accounts-1317--parental-controls">Terms of Service</a>
+for full detail.</p>
+<h3>Linking a guardian</h3>
+<p>From Settings → Screen Time &amp; Safety, a teen can invite a parent or
+guardian. Once linked, the guardian can view screen time and adjust
+the time limit, break reminders, messaging permission, and whether the
+account is public or private, from Family Center. Sensitive-content
+filtering always stays on, for everyone. A teen can always switch their
+own account back to private; only the linked guardian can make it
+public again.</p>
+<h3>Unlinking a guardian</h3>
+<p>Either the teen or the linked guardian can end the link at any time
+from the same Screen Time &amp; Safety screen. Doing so resets the
+account's safety settings back to their protective defaults, and lets
+the guardian know.</p>
+<h2>Account &amp; Settings</h2>
+<h3>Changing your username</h3>
+<p>Settings → Edit Profile → Username. Limited to once every 30 days.</p>
+<h3>Managing devices</h3>
+<p>Settings → Linked Devices shows every device signed into your account.
+Linking a new device brings over your past conversation history from
+one of your other active devices, so it doesn't start out empty.
+Remove a device you no longer use or don't recognize from there — this
+also revokes that device's ability to decrypt future messages.</p>
+<h3>Deleting your account</h3>
+<p>Settings → Delete Account. This is permanent; see our <a href="./privacy-policy.html">Privacy Policy</a>
+for what happens to your data afterward.</p>
+<h2>Music</h2>
+<h3>Browsing and playing tracks</h3>
+<p>Open the Music tab to search and browse uploaded tracks. Tap a track to
+start playback; use the mini-player at the bottom to control playback
+from anywhere in the app.</p>
+<h3>Uploading a track</h3>
+<p>From Music → Upload, select an audio file and add title, artist, and
+cover art. Uploaded tracks are public content, subject to the same
+Community Standards as Loops. You can turn on "Allow offline download"
+so listeners can save the track for offline listening.</p>
+<h3>Downloading a track for offline listening</h3>
+<p>If the artist has allowed it, you'll see a Save Offline option from
+Now Playing. Downloaded audio is stored only on your device, in a
+location other apps can't open, and isn't available for tracks the
+artist hasn't enabled downloads for.</p>
+<h2>Troubleshooting</h2>
+<h3>Not receiving notifications</h3>
+<p>Check that notifications are enabled both in your device's system
+settings and in-app under Settings → Notifications.</p>
+<h3>Playback stops in the background</h3>
+<p>Make sure background app refresh / background activity is allowed for
+Loopnod in your device settings — some devices' battery optimization
+features can pause audio playback when the app isn't in the foreground.</p>
+<h3>Still stuck?</h3>
+<p>Contact us at loopnod.support@gmail.com with your device type, app
+version (Settings → About), and a description of what happened.</p>
+</main>
+<footer>
+  © Loopnod. Policies listed here apply to the Loopnod app and any Loopnod websites.
+  <div class="foot-links">
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="community-standards.html">Community Standards</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="advertising-policy.html">Advertising Policy</a>
+  </div>
+</footer>
+</body>
+</html>
