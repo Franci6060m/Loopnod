@@ -164,7 +164,7 @@ footer .foot-links a:hover { color: var(--accent); }
   <p class="sub">The agreement between you and Loopnod for using the app.</p>
 </div>
 <main>
-<p><strong>Effective Date:</strong> August 21, 2026 · <strong>Version:</strong> 2026-08-21</p>
+<p><strong>Effective Date:</strong> September 6, 2026 · <strong>Version:</strong> 2026-09-06</p>
 <p>These Terms of Service ("<strong>Terms</strong>") are a legal agreement between you
 ("<strong>you</strong>," "<strong>User</strong>") and Francis&M_Tech ("<strong>Loopnod</strong>,"
 "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), governing your access to and use of the
@@ -232,7 +232,7 @@ in our Privacy Policy.</p>
 <li>you have not previously been banned from the Service for violating
   these Terms, unless we have expressly reinstated you.</li>
 </ul>
-<h3>1.4 Teen accounts (13–17) &amp; parental controls</h3>
+<h3 id="14-teen-accounts-1317--parental-controls">1.4 Teen accounts (13–17) &amp; parental controls</h3>
 <p>Accounts registered with an age between 13 and 17 receive additional
 protections by default:</p>
 <ul>
@@ -266,7 +266,7 @@ individual users; create and participate in end-to-end encrypted
 <strong>Groups</strong>; browse and upload music tracks, with the option for
 artists to allow offline downloads of their own tracks; and back up your
 messages to your own cloud storage.</p>
-<h3>2.1 Groups</h3>
+<h3 id="groups">2.1 Groups</h3>
 <p>Any user can create a Group and add other members to it. Every Group
 has at least one <strong>admin</strong> — its creator, initially — who can add or
 remove members, promote or demote other members to/from admin, rename
@@ -333,7 +333,10 @@ have all necessary rights and permissions to post it and grant the
 license above; that it does not infringe any third party's rights;
 that it complies with these Terms and our Community Standards; and
 that it does not depict or sexualize a minor in any form, including
-AI-generated or fictional depictions.</p>
+AI-generated or fictional depictions; and that it does not contain a
+sexual, intimate, or nude depiction of any real person — including an
+AI-generated or "deepfake" image or video — that was created or is
+being shared without that person's consent.</p>
 <h3>4.4 We are not responsible for User Content</h3>
 <p>Loopnod does not pre-screen User Content before it's posted, and we are
 not responsible or liable for content posted by other users. Where
@@ -349,7 +352,12 @@ agree not to, and not to assist or enable others to:</p>
   endangers a minor in any way, that promotes terrorism or violent
   extremism, or that promotes suicide, self-harm, or eating disorders;</li>
 <li>harass, bully, stalk, threaten, dox, or impersonate another user, or
-  post non-consensual intimate imagery;</li>
+  post non-consensual intimate imagery, including AI-generated or
+  "deepfake" sexual or intimate imagery of a real person;</li>
+<li>share manipulated or synthetic media presented as authentic in a way
+  designed to deceive, where it's reasonably likely to cause harm — for
+  example, fabricated footage of a real person doing or saying
+  something they didn't, presented as genuine;</li>
 <li>discriminate against or incite hatred toward individuals or groups
   based on a protected characteristic;</li>
 <li>add another user to a Group without a good-faith belief they want to
@@ -410,6 +418,22 @@ changes.</p>
 <p>We provide a "safety number" verification feature for 1:1 conversations
 that lets you independently confirm you're talking to the device you
 think you are; we encourage you to use it for sensitive conversations.</p>
+<h3 id="beta-encryption">7.1 Beta status of our encryption implementation</h3>
+<p>The Service is currently offered as a <strong>beta</strong>, and that applies to our
+encryption implementation specifically. We built our own implementation
+of the Double Ratchet and X3DH protocols described above — the same
+publicly documented protocols used by Signal and WhatsApp — using
+standard, widely reviewed cryptographic primitives (X25519, Ed25519,
+XSalsa20-Poly1305, SHA-512). We do not use Signal's own libsignal
+software library. This means our implementation has not benefited from
+that library's many years of independent, public security review, and
+<strong>has not yet completed an independent third-party security audit
+of its own</strong>. We intend to commission one before this feature exits
+beta.</p>
+<p>Until that audit is complete, treat this encryption as a strong,
+good-faith protection — not as an independently verified guarantee. If
+a breach of this encryption would cause you severe harm, do not rely on
+it as your sole protection for that information during the beta period.</p>
 <p><strong>By default, there is no message backup or account recovery for
 encrypted content</strong>, for either direct messages or Group messages: the
 private keys that decrypt your messages live only on your device(s),
@@ -418,7 +442,7 @@ them, or recover them. If you sign out, uninstall the app, or lose
 every device those keys were on — without chat backup turned on and
 with no other linked device to sync from (see below) — the messages
 that were only there are unrecoverable, including by us.</p>
-<h3>7.1 Chat backups (optional)</h3>
+<h3>7.2 Chat backups (optional)</h3>
 <p>You can choose to back up your chats from Settings → Chats → Chat
 backup. This is off by default. When it's on, your backup is saved to
 your own Google Drive — a private storage area tied to your Google
@@ -438,7 +462,7 @@ our servers.</p>
 <p>You control how often backups run, and you can turn chat backup off or
 delete an existing backup at any time, from the app or directly in your
 Google Drive.</p>
-<h3>7.2 Linking a device shares your history</h3>
+<h3>7.3 Linking a device shares your history</h3>
 <p>Linking a new device (Settings → Linked Devices) can bring over your
 past conversation history from one of your other active devices,
 instead of starting empty. This happens directly between your own
@@ -468,7 +492,7 @@ notification preferences. We may also send you service-related emails
 (security alerts, verification codes) that are not optional while you
 maintain an account, and, separately, marketing communications, which
 you may opt out of at any time.</p>
-<h2>10. Intellectual Property &amp; DMCA</h2>
+<h2 id="10-intellectual-property--dmca">10. Intellectual Property &amp; DMCA</h2>
 <h3>10.1 Our IP</h3>
 <p>The Service, including its design, software, trademarks, and all
 content we (rather than users) create, is owned by Loopnod or our
@@ -490,13 +514,24 @@ notice, notify the user who posted it, and process any valid
 counter-notice consistent with 17 U.S.C. § 512. We maintain a policy of
 terminating, in appropriate circumstances, accounts of repeat
 infringers.</p>
+<h3>10.3 Automated copyright checks on uploaded tracks</h3>
+<p>Music tracks you upload are automatically checked for a match against
+known copyrighted recordings before they're fully available on the
+Service. A track flagged as a match may be restricted or removed, and
+we may notify you of the reason. This automated check is a tool to
+help enforce this Section — it does not replace, and is without
+prejudice to, the DMCA process above, which remains available to any
+copyright owner.</p>
 <h2>11. Third-Party Services</h2>
 <p>The Service relies on third-party infrastructure providers, currently
-including Supabase for backend/database services and push notification
-providers, among others as the Service evolves — see our <a href="./privacy-policy.html">Privacy Policy</a>
-for the current list. We are not responsible for the availability,
-content, or practices of these third parties beyond our contractual
-relationship with them.</p>
+including Supabase for backend/database services, the Expo push
+notification service, Cloudflare (for optional caption translation and
+for the automated content and copyright checks described in Sections
+6.1 and 10.3), and, where enabled for a given build, Sentry for crash
+and error monitoring, among others as the Service evolves — see our
+<a href="./privacy-policy.html">Privacy Policy</a> for the current list. We are not
+responsible for the availability, content, or practices of these third
+parties beyond our contractual relationship with them.</p>
 <h2>12. Disclaimers</h2>
 <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES
 OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT

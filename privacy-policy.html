@@ -164,7 +164,7 @@ footer .foot-links a:hover { color: var(--accent); }
   <p class="sub">How we collect, use, and protect your information.</p>
 </div>
 <main>
-<p><strong>Effective Date:</strong> August 21, 2026 · <strong>Version:</strong> 2026-08-21</p>
+<p><strong>Effective Date:</strong> September 6, 2026 · <strong>Version:</strong> 2026-09-06</p>
 <p>This Privacy Policy explains how Francis&M_Tech ("<strong>Loopnod</strong>,"
 "<strong>we</strong>," "<strong>us</strong>") collects, uses, discloses, and protects information
 in connection with the Loopnod app and related services (the
@@ -197,12 +197,12 @@ in connection with the Loopnod app and related services (the
 </tr>
 <tr>
 <td>Direct messages</td>
-<td>Text, voice notes, shared audio clips — <strong>see Section 1.3</strong></td>
+<td>Text, voice notes, shared audio clips — <strong>see Section 1.5</strong></td>
 <td>Chat</td>
 </tr>
 <tr>
 <td>Group information</td>
-<td>Group name, membership list, each member's role (admin/member), and Group messages — <strong>the message content is end-to-end encrypted the same way direct messages are; the membership and role information is not — see Section 1.3</strong></td>
+<td>Group name, membership list, each member's role (admin/member), and Group messages — <strong>the message content is end-to-end encrypted the same way direct messages are; the membership and role information is not — see Section 1.5</strong></td>
 <td>Groups</td>
 </tr>
 <tr>
@@ -231,14 +231,59 @@ in connection with the Loopnod app and related services (the
 </tr>
 <tr>
 <td>Message metadata</td>
-<td>For direct messages and Group messages: who you're messaging or which Group, when, and for voice notes/audio clips, approximate file size and duration — <strong>not the content itself</strong>, see Section 1.3</td>
+<td>For direct messages and Group messages: who you're messaging or which Group, when, and for voice notes/audio clips, approximate file size and duration — <strong>not the content itself</strong>, see Section 1.5</td>
+</tr>
+<tr>
+<td>Push notification token</td>
+<td>A device token (via the Expo push notification service, which relies on Apple Push Notification service or Firebase Cloud Messaging) used to deliver notifications to your device. It does not contain message content.</td>
+</tr>
+<tr>
+<td>Crash &amp; error diagnostics</td>
+<td>If crash reporting is enabled for your build: device model, OS version, app version, and the technical details of an error (stack trace). Message content, captions, passwords, and access tokens are automatically stripped on-device before a report is ever sent — see Section 4.</td>
 </tr>
 </tbody>
 </table>
 <p>We do not use third-party advertising trackers or sell advertising, so
 we do not collect data for ad-targeting purposes. See our
 <a href="./advertising-policy.html">Advertising Policy</a> for more.</p>
-<h3>1.3 Direct message and Group message privacy</h3>
+<h3>1.3 Permissions we request on your device</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why we ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Photo library</td>
+<td>To let you choose photos and videos to share as Loops, Status posts, or a profile photo.</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>To let you capture photos and videos directly for a Loop, Status, or profile photo.</td>
+</tr>
+<tr>
+<td>Microphone</td>
+<td>To let you record voice notes and audio clips.</td>
+</tr>
+</tbody>
+</table>
+<p>Each permission is optional and only requested when you use the related
+feature; you can decline it and still use the rest of the Service, and
+you can change permission decisions at any time in your device's system
+settings. We do not request access to your contacts, precise location,
+or device biometrics (such as Face ID or fingerprint data) for any
+feature of the Service.</p>
+<h3>1.4 Information we do not collect</h3>
+<p>To be direct about the boundaries of what we gather: we do not collect
+your precise or approximate geolocation, your device contacts, biometric
+identifiers (facial geometry, fingerprint, or voiceprint templates),
+government-issued ID documents or images, or advertising identifiers
+(such as Apple's IDFA or Android's advertising ID). Age assurance (see
+Section 7) is handled through self-attestation and does not involve
+uploading an ID or a photo of your face to our servers.</p>
+<h3>1.5 Direct message and Group message privacy</h3>
 <p><strong>What we cannot see:</strong> The <em>content</em> of your direct messages and
 Group messages — text, voice note audio, and shared audio clip audio —
 is protected by end-to-end encryption before it ever leaves your
@@ -256,6 +301,15 @@ the approximate size and duration of the file (not its content). We
 also process your public identity keys (used to set up encrypted
 sessions) and, transiently, encrypted file blobs in cloud storage,
 access to which is restricted to conversation or Group participants.</p>
+<p><strong>Beta status.</strong> The Service, including this encryption, is currently
+offered as a beta. Our encryption is our own implementation of the
+Double Ratchet and X3DH protocols (the same publicly documented
+protocols Signal and WhatsApp use), built on standard cryptographic
+primitives rather than on Signal's own libsignal library, and it has
+not yet completed an independent third-party security audit. See
+<a href="./terms-of-service.html#beta-encryption">Terms of Service Section 7.1</a> for
+detail. Treat it as a strong, good-faith protection during this period
+rather than an independently verified guarantee.</p>
 <p><strong>Anyone in a Group can read what's sent to it, for as long as they're
 a member.</strong> Encryption protects Group content from us and from
 outsiders — it does not, and cannot, protect you from another member of
@@ -292,7 +346,7 @@ as any other message. If you sign out, uninstall the app, or lose every
 device your keys were on — with no other linked device to sync from and
 no chat backup turned on — the messages that were only there are gone,
 including to us.</p>
-<h3>1.4 Information from other users</h3>
+<h3>1.6 Information from other users</h3>
 <p>If another user has your contact information and connects it with our
 Service, or if another user messages you, mentions you, or adds you to
 a Group, we may receive limited information about you from them.</p>
@@ -305,7 +359,16 @@ a Group, we may receive limited information about you from them.</p>
 <li>route and deliver end-to-end encrypted messages, without being able
   to read their content;</li>
 <li>detect, investigate, and prevent fraud, abuse, and violations of our
-  Terms of Service and Community Standards;</li>
+  Terms of Service and Community Standards, including automated
+  detection tools (for example, checking a publicly uploaded music
+  track against known copyrighted recordings, or scanning publicly
+  posted content for apparent CSAM) — these tools never operate on
+  end-to-end encrypted message content, see Section 1.5;</li>
+<li>provide optional features you choose to use, such as translating a
+  Loop's caption into another language;</li>
+<li>diagnose and fix crashes and technical errors, using automatically
+  stripped, message-content-free diagnostic data where crash reporting
+  is enabled for your build — see Section 1.2;</li>
 <li>respond to your support requests;</li>
 <li>send you service-related communications (security alerts,
   verification codes) and, where you've opted in, product updates;</li>
@@ -316,7 +379,7 @@ a Group, we may receive limited information about you from them.</p>
 </ul>
 <p>We do not use the content of your direct or Group messages for any
 purpose, including the ones above, because we are not able to — see
-Section 1.3.</p>
+Section 1.5.</p>
 <h2>3. Legal Bases for Processing (EU/UK/EEA Users)</h2>
 <p>If you're located in the EU, UK, or EEA, we process your personal data
 under the following legal bases:</p>
@@ -336,11 +399,22 @@ the following circumstances:</p>
 <ul>
 <li><strong>Service providers</strong> who help us operate the Service under
   contractual confidentiality and data-protection obligations,
-  currently including Supabase (backend/database), push notification
-  providers, and infrastructure/CDN providers as the Service evolves;</li>
+  currently including Supabase (backend/database), the Expo push
+  notification service (which relies on Apple Push Notification service
+  or Firebase Cloud Messaging), Cloudflare (for optional caption
+  translation and for automated scanning of publicly posted content and
+  publicly uploaded tracks — never your message content), and, where
+  enabled for a given build, Sentry (crash and error monitoring, with
+  message content and credentials stripped before anything leaves your
+  device — see Section 1.2);</li>
 <li><strong>Legal process</strong> — where required to comply with a valid subpoena,
   warrant, court order, or other legal obligation, to the extent our
-  end-to-end encryption architecture technically allows us to comply;</li>
+  end-to-end encryption architecture technically allows us to comply.
+  Where legally permitted, we notify the affected user before disclosing
+  account information in response to a government or legal request; we
+  do not give notice where a court order or law prohibits it, or where
+  doing so would create a safety risk (for example, a CSAM
+  investigation or a credible threat of imminent harm);</li>
 <li><strong>Safety and enforcement</strong> — with law enforcement where necessary to
   investigate fraud, abuse, or violations of our Terms, including
   mandatory CSAM reporting to NCMEC;</li>
@@ -358,7 +432,7 @@ of content or your account, we remove it from active systems and
 complete removal from our own internal system backups and caches
 within a reasonable period, except where retention is legally required
 (for example, records related to a CSAM report). Message metadata is
-retained separately from message content, consistent with Section 1.3.</p>
+retained separately from message content, consistent with Section 1.5.</p>
 <p><strong>Chat backups you turn on are different.</strong> These live in
 your own Google Drive, not in any backup or cache of ours, so this
 Section doesn't apply to them — we have nothing to retain or delete on
@@ -367,7 +441,7 @@ your hands: from the app (Settings → Chats → Chat backup) or directly
 in your Google Drive. For an end-to-end encrypted backup specifically,
 we also never hold the password or key protecting it, so we cannot
 open, restore, or recover one on your behalf under any circumstance,
-including a legal request — see Section 1.3.</p>
+including a legal request — see Section 1.5.</p>
 <h2>6. Your Rights and Choices</h2>
 <h3>6.1 Access and correction</h3>
 <p>You can view and update most of your information directly in the app
@@ -433,7 +507,7 @@ their protective defaults and notifies the guardian.</p>
 protect your information, including:</p>
 <ul>
 <li>end-to-end encryption for direct message and Group message content,
-  as described in Section 1.3;</li>
+  as described in Section 1.5;</li>
 <li>encryption of data in transit (TLS) and at rest for account and
   content data;</li>
 <li>database-level access controls (Row Level Security) restricting each
